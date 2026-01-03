@@ -90,7 +90,7 @@
 </head>
 <body>
     <header>
-        <h1>🗺️ Área Inundable Colonias Río Potinaspak</h1>
+        <h1 aria-label="Mapa del Área Inundable Colonias Río Potinaspak">🗺️ Área Inundable Colonias Río Potinaspak</h1>
     </header>
     
     <div class="info-panel">
@@ -133,7 +133,8 @@
     
     <script>
         // Inicializar el mapa
-        // Coordenadas aproximadas del centro de México (ajustar según ubicación real)
+        // IMPORTANTE: Reemplaza estas coordenadas con la ubicación real del Río Potinaspak
+        // Las coordenadas actuales son placeholders que deben ser actualizadas
         var map = L.map('map').setView([19.4326, -99.1332], 13);
         
         // Agregar capa de mapa base de OpenStreetMap
@@ -153,7 +154,7 @@
                     }).addTo(map);
                 })
                 .catch(error => {
-                    console.log('Esperando datos GeoJSON en: ' + url);
+                    console.log('Error cargando datos GeoJSON desde: ' + url, error);
                 });
         }
         
