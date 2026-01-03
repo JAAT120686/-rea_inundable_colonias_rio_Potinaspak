@@ -1,6 +1,6 @@
 # ÁREAS INUNDABLES EN LAS COLONIAS CERCANAS AL RÍO POTINASPAK, TUXTLA GUTIÉRREZ, CHIAPAS
 
-![Mapa de inundabilidad - Río Potinaspak](banner.png)
+![https://felt.com/map/Tesis-regionalizacion-H2OWQV7qTSGHwL7tzK3pyD?share=1&loc=16.7461,-93.08691,12.96z](banner.png)
 
 ## Objetivo
 
