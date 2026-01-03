@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "name": "colonias",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Colonia Centro",
+        "poblacion": "5000",
+        "descripcion": "Colonia Centro, zona urbana con alta densidad poblacional"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-99.140, 19.425],
+            [-99.130, 19.425],
+            [-99.130, 19.435],
+            [-99.140, 19.435],
+            [-99.140, 19.425]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Colonia Norte",
+        "poblacion": "3500",
+        "descripcion": "Colonia Norte, zona residencial en desarrollo"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-99.130, 19.435],
+            [-99.120, 19.435],
+            [-99.120, 19.445],
+            [-99.130, 19.445],
+            [-99.130, 19.435]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Colonia Sur",
+        "poblacion": "2800",
+        "descripcion": "Colonia Sur, zona principalmente residencial"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-99.140, 19.420],
+            [-99.130, 19.420],
+            [-99.130, 19.425],
+            [-99.140, 19.425],
+            [-99.140, 19.420]
+          ]
+        ]
+      }
+    }
+  ]
+}

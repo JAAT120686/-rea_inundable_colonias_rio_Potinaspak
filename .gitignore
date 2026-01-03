@@ -1,0 +1,32 @@
+# Archivos temporales
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+
+# Archivos de QGIS
+*.qgs~
+*.qgz~
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Archivos de Node
+node_modules/
+npm-debug.log
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de sistema
+.Trash-*
