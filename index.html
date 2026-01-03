@@ -173,6 +173,21 @@
             crossorigin=""></script>
     
     <script>
+        // Constantes de configuración
+        const RISK_LEVELS = {
+            ALTO: 'alto',
+            MEDIO: 'medio',
+            BAJO: 'bajo',
+            DEFAULT: 'bajo'
+        };
+        
+        const RISK_COLORS = {
+            alto: 'rgba(255, 0, 0, 0.5)',
+            medio: 'rgba(255, 165, 0, 0.5)',
+            bajo: 'rgba(255, 255, 0, 0.5)',
+            default: 'rgba(0, 0, 255, 0.3)'
+        };
+        
         // Inicializar el mapa
         // IMPORTANTE: Reemplaza estas coordenadas con la ubicación real del Río Potinaspak
         // Las coordenadas actuales son placeholders que deben ser actualizadas
@@ -210,29 +225,15 @@
                     }).addTo(map);
                 })
                 .catch(error => {
-                    console.log('Error cargando datos GeoJSON desde: ' + url, error);
+                    console.log('Error cargando datos GeoJSON desde:', url, error);
                     showError('No se pudieron cargar algunos datos del mapa. Verifica que los archivos GeoJSON estén en la carpeta data/');
                 });
         }
         
         // Estilos para diferentes niveles de riesgo
         function getStyle(feature) {
-            var riesgo = feature.properties.riesgo || 'bajo';
-            var color;
-            
-            switch(riesgo.toLowerCase()) {
-                case 'alto':
-                    color = 'rgba(255, 0, 0, 0.5)';
-                    break;
-                case 'medio':
-                    color = 'rgba(255, 165, 0, 0.5)';
-                    break;
-                case 'bajo':
-                    color = 'rgba(255, 255, 0, 0.5)';
-                    break;
-                default:
-                    color = 'rgba(0, 0, 255, 0.3)';
-            }
+            var riesgo = feature.properties.riesgo || RISK_LEVELS.DEFAULT;
+            var color = RISK_COLORS[riesgo.toLowerCase()] || RISK_COLORS.default;
             
             return {
                 fillColor: color,
