@@ -86,12 +86,53 @@
             margin-right: 10px;
             border: 1px solid #ccc;
         }
+        
+        .error-message {
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #f5c6cb;
+            z-index: 1001;
+            display: none;
+            max-width: 90%;
+            text-align: center;
+        }
+        
+        /* Responsive design for mobile */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 18px;
+            }
+            
+            .info-panel {
+                position: relative;
+                top: 0;
+                right: 0;
+                max-width: 100%;
+                margin: 10px;
+                font-size: 14px;
+            }
+            
+            .legend {
+                bottom: 10px;
+                right: 10px;
+                font-size: 12px;
+                max-width: 200px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1 aria-label="Mapa del Área Inundable Colonias Río Potinaspak">🗺️ Área Inundable Colonias Río Potinaspak</h1>
     </header>
+    
+    <div id="error-message" class="error-message" role="alert" aria-live="polite"></div>
     
     <div class="info-panel">
         <h3>📌 Información</h3>
@@ -106,22 +147,22 @@
     
     <div id="map"></div>
     
-    <div class="legend">
+    <div class="legend" role="region" aria-label="Leyenda del mapa">
         <h4>Leyenda</h4>
         <div class="legend-item">
-            <div class="legend-color" style="background-color: rgba(255, 0, 0, 0.5);"></div>
+            <div class="legend-color" style="background-color: rgba(255, 0, 0, 0.5);" aria-hidden="true"></div>
             <span>Área de alto riesgo</span>
         </div>
         <div class="legend-item">
-            <div class="legend-color" style="background-color: rgba(255, 165, 0, 0.5);"></div>
+            <div class="legend-color" style="background-color: rgba(255, 165, 0, 0.5);" aria-hidden="true"></div>
             <span>Área de riesgo medio</span>
         </div>
         <div class="legend-item">
-            <div class="legend-color" style="background-color: rgba(255, 255, 0, 0.5);"></div>
+            <div class="legend-color" style="background-color: rgba(255, 255, 0, 0.5);" aria-hidden="true"></div>
             <span>Área de riesgo bajo</span>
         </div>
         <div class="legend-item">
-            <div class="legend-color" style="background-color: rgba(0, 0, 255, 0.3);"></div>
+            <div class="legend-color" style="background-color: rgba(0, 0, 255, 0.3);" aria-hidden="true"></div>
             <span>Río Potinaspak</span>
         </div>
     </div>
@@ -143,6 +184,16 @@
             maxZoom: 19
         }).addTo(map);
         
+        // Función para mostrar mensajes de error al usuario
+        function showError(message) {
+            var errorDiv = document.getElementById('error-message');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+            setTimeout(function() {
+                errorDiv.style.display = 'none';
+            }, 5000);
+        }
+        
         // Función para cargar datos GeoJSON
         function loadGeoJSON(url, style, onEachFeature) {
             fetch(url)
@@ -160,6 +211,7 @@
                 })
                 .catch(error => {
                     console.log('Error cargando datos GeoJSON desde: ' + url, error);
+                    showError('No se pudieron cargar algunos datos del mapa. Verifica que los archivos GeoJSON estén en la carpeta data/');
                 });
         }
         
