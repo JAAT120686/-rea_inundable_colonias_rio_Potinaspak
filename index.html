@@ -146,7 +146,12 @@
         // Función para cargar datos GeoJSON
         function loadGeoJSON(url, style, onEachFeature) {
             fetch(url)
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('HTTP error ' + response.status);
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     L.geoJSON(data, {
                         style: style,
@@ -189,22 +194,33 @@
         // Función para mostrar información al hacer clic
         function onEachFeature(feature, layer) {
             if (feature.properties) {
-                var popupContent = '<div style="font-family: Arial, sans-serif;">';
+                // Crear elemento div para el contenido del popup
+                var popupDiv = document.createElement('div');
+                popupDiv.style.fontFamily = 'Arial, sans-serif';
                 
                 if (feature.properties.nombre) {
-                    popupContent += '<h4 style="margin: 0 0 10px 0;">' + feature.properties.nombre + '</h4>';
+                    var h4 = document.createElement('h4');
+                    h4.style.margin = '0 0 10px 0';
+                    h4.textContent = feature.properties.nombre;
+                    popupDiv.appendChild(h4);
                 }
                 
                 if (feature.properties.riesgo) {
-                    popupContent += '<p><strong>Nivel de riesgo:</strong> ' + feature.properties.riesgo + '</p>';
+                    var pRiesgo = document.createElement('p');
+                    var strongRiesgo = document.createElement('strong');
+                    strongRiesgo.textContent = 'Nivel de riesgo: ';
+                    pRiesgo.appendChild(strongRiesgo);
+                    pRiesgo.appendChild(document.createTextNode(feature.properties.riesgo));
+                    popupDiv.appendChild(pRiesgo);
                 }
                 
                 if (feature.properties.descripcion) {
-                    popupContent += '<p>' + feature.properties.descripcion + '</p>';
+                    var pDesc = document.createElement('p');
+                    pDesc.textContent = feature.properties.descripcion;
+                    popupDiv.appendChild(pDesc);
                 }
                 
-                popupContent += '</div>';
-                layer.bindPopup(popupContent);
+                layer.bindPopup(popupDiv);
             }
         }
         
