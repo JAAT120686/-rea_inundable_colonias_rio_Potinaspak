@@ -1,21 +1,31 @@
 # ÁREAS INUNDABLES EN LAS COLONIAS CERCANAS AL RÍO POTINASPAK, TUXTLA GUTIÉRREZ, CHIAPAS
 
-![https://felt.com/map/Tesis-regionalizacion-H2OWQV7qTSGHwL7tzK3pyD?share=1&loc=16.7461,-93.08691,12.96z](banner.png)
+[![Vista previa del mapa](zona.png)](https://felt.com/map/Tesis-regionalizacion-H2OWQV7qTSGHwL7tzK3pyD?loc=16.7772%2C-93.13366%2C14.71z)
 
-## Objetivo
+> *Haz clic en la imagen superior para interactuar con el mapa.*
 
-Visualizar las áreas inundables en colonias cercanas al Río Potinaspak (Tuxtla Gutiérrez, Chiapas), utilizando análisis espacial e información de **INEGI** y **Protección Civil**.
+---
 
-## Herramientas
+## 🗺️ Acceso al Mapa Interactivo
 
-- QGIS (análisis espacial y generación del mapa)
-- Complemento/exportación web (por ejemplo qgis2web) para generar el **mapa interactivo en HTML** (`map.html`)
-- Capas/datos de referencia: INEGI y Protección Civil
+Este proyecto utiliza **Felt** para la visualización web, permitiendo una exploración fluida y moderna de los datos de riesgo.
 
-### Mapa interactivo (HTML)
+Haz clic en el siguiente botón para abrir el mapa a pantalla completa en tu navegador:
 
-> Nota: GitHub no incrusta HTML directamente en el README.
+[![Ver Mapa en Felt](https://img.shields.io/badge/Ver_Mapa_Interactivo-Felt.com-blue?style=for-the-badge&logo=map&logoColor=white)](https://felt.com/map/Tesis-regionalizacion-H2OWQV7qTSGHwL7tzK3pyD?loc=16.7772%2C-93.13366%2C14.71z)
 
-- **Abrir localmente:** descarga el repositorio y abre `map.html` en tu navegador.
-- **Publicar con GitHub Pages:** si habilitas Pages, el enlace típico sería:
-  - https://JAAT120686.github.io/-rea_inundable_colonias_rio_Potinaspak/map.html
+---
+
+## 🎯 Objetivo
+
+Visualizar las áreas inundables en colonias cercanas al Río Potinaspak (Tuxtla Gutiérrez, Chiapas), utilizando análisis espacial e información oficial para identificar zonas de riesgo.
+
+## 🛠️ Herramientas y Datos Utilizados
+
+- **QGIS:** Procesamiento de datos, análisis espacial y preparación de capas cartográficas.
+- **Felt:** Plataforma de publicación web para visualización interactiva y diseño de simbología.
+- **Capas/datos de referencia:** - Instituto Nacional de Estadística y Geografía (**INEGI**).
+    - **Protección Civil**.
+
+---
+*Este proyecto es parte de un trabajo de tesis sobre regionalización.*
