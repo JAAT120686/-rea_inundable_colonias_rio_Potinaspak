@@ -22,10 +22,18 @@ Visualizar las áreas inundables en colonias cercanas al Río Potinaspak (Tuxtla
 
 ## 🛠️ Herramientas y Datos Utilizados
 
-- **QGIS:** Procesamiento de datos, análisis espacial y preparación de capas cartográficas.
-- **Felt:** Plataforma de publicación web para visualización interactiva y diseño de simbología.
-- **Capas/datos de referencia:** - Instituto Nacional de Estadística y Geografía (**INEGI**).
-    - **Protección Civil**.
+![QGIS](https://img.shields.io/badge/QGIS-Análisis_Espacial-589632?style=for-the-badge&logo=qgis&logoColor=white)
+![Felt](https://img.shields.io/badge/Felt-Mapa_Interactivo-0052FF?style=for-the-badge&logo=felt&logoColor=white)
+![INEGI](https://img.shields.io/badge/Datos-INEGI-004A99?style=for-the-badge)
+![Protección Civil](https://img.shields.io/badge/Datos-Protección_Civil-FF6600?style=for-the-badge)
+
+### Acceso al Mapa Interactivo
+
+Debido a que GitHub no permite incrustar mapas dinámicos directamente en el archivo README, puedes acceder a la versión completa haciendo clic en el siguiente botón:
+
+[![Ver Mapa en Felt](https://img.shields.io/badge/VER_MAPA_INTERACTIVO_AQUÍ-Felt.com-blue?style=for-the-badge&logo=map&logoColor=white)](https://felt.com/map/Tesis-regionalizacion-H2OWQV7qTSGHwL7tzK3pyD?loc=16.7772%2C-93.13366%2C14.71z)
+
+> **Nota:** No es necesario descargar archivos HTML adicionales. El mapa se actualiza en tiempo real a través de la plataforma Felt.
 
 ---
-*Este proyecto es parte de un trabajo de tesis sobre regionalización.*
+*Este proyecto es parte de los resultados de la investigación doctoroal: resiliencia comunitaria y protección civil en la microrregión de riesgo Potinaspak.*
