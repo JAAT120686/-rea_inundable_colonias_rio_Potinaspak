@@ -1,6 +1,6 @@
 # ÁREAS INUNDABLES EN LAS COLONIAS CERCANAS AL RÍO POTINASPAK, TUXTLA GUTIÉRREZ, CHIAPAS
 
-[![Vista previa del mapa](Zona.png)](https://felt.com/map/Tesis-regionalizacion-H2OWQV7qTSGHwL7tzK3pyD?loc=16.7772%2C-93.13366%2C14.71z)
+[![Vista previa del mapa](banner.png)](https://felt.com/map/Tesis-regionalizacion-H2OWQV7qTSGHwL7tzK3pyD?loc=16.7772%2C-93.13366%2C14.71z)
 
 > *Haz clic en la imagen superior para interactuar con el mapa.*
 
